@@ -11,6 +11,8 @@ public class TreeSet1 {
         fullTreeSet(input2);
         System.out.println(input1);
         System.out.println(input2);
+        Subscribe(input1,input2);
+        System.out.println(input1);
 
     }
     static void fullTreeSet(TreeSet input){
@@ -20,6 +22,12 @@ public class TreeSet1 {
             //System.out.println(c);
             input.add(c);
         }
+    }
+    static void Subscribe(TreeSet input1, TreeSet input2){
+        TreeSet <Character> newTreeSet=new TreeSet<>();
+        newTreeSet.addAll(input1);
+        newTreeSet.addAll(input2);
+        System.out.println("subscribe :"+newTreeSet);
     }
 
 }
