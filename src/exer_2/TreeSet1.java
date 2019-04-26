@@ -12,8 +12,8 @@ public class TreeSet1 {
         initializeTreeSet(input2);
         System.out.println(input1);
         System.out.println(input2);
-        total(input1, input2);
-        sharing(input1, input2);
+        total(input1,input2);
+        sharing(input1,input2);
 
 
     }
@@ -36,12 +36,11 @@ public class TreeSet1 {
 
     static void sharing(TreeSet input1, TreeSet input2) {
         TreeSet<Character> newTreeSet = new TreeSet<>();
-        List<Character> list1 = (List) input1;
-        List<Character> list2 = (List) input2;
-        for (int i = 0; i < list1.size(); i++) {
-            if (list2.contains(list1.get(i))) {
-                newTreeSet.add(list1.get(i));
-            }
+        for (Object c:input1
+             ) {
+            if(input2.contains(c)){
+                newTreeSet.add((Character) c);
+        }
         }
         System.out.println("Sharing :" + newTreeSet);
     }
